@@ -1,0 +1,75 @@
+{
+  "name": "react-admin",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "compression": "^1.6.2",
+    "express": "^4.14.0",
+    "generate-password": "^1.7.0",
+    "google-maps-react": "^2.0.6",
+    "path": "^0.12.7",
+    "react-google-maps": "^9.4.5",
+    "react-quill": "^1.3.5"
+  },
+  "scripts": {
+    "start": "env-cmd -f ./env/.local react-scripts start",
+    "prebuild:dev": "rm -rf build",
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "build:dev": "env-cmd -f ./env/.dev react-scripts build",
+    "prebuild:prod": "rm -rf build",
+    "build:prod": "env-cmd -f ./env/.prod react-scripts build",
+    "prebuild:staging": "rm -rf build",
+    "build:staging": "env-cmd -f ./env/.staging react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "antd": "^4.3.3",
+    "antd-img-crop": "^3.9.0",
+    "array-move": "^4.0.0",
+    "body-scroll-lock": "^4.0.0-beta.0",
+    "env-cmd": "^10.0.1",
+    "fuse.js": "^6.4.6",
+    "google-maps-react": "^2.0.6",
+    "i18next": "^20.4.0",
+    "lodash": "^4.17.21",
+    "md5": "^2.2.1",
+    "moment": "^2.24.0",
+    "node-sass": "^4.13.0",
+    "qrcode.react": "^1.0.0",
+    "query-string": "^6.9.0",
+    "rc-color-picker": "^1.2.6",
+    "react": "^16.11.0",
+    "react-color": "^2.19.3",
+    "react-dom": "^16.11.0",
+    "react-i18next": "^11.11.4",
+    "react-places-autocomplete": "^7.3.0",
+    "react-redux": "^7.0.2",
+    "react-region-select": "^2.3.0",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "3.2.0",
+    "react-slick": "^0.28.1",
+    "react-sortable-hoc": "^2.0.0",
+    "react-to-print": "^2.9.0",
+    "redux": "^4.0.1",
+    "redux-saga": "^1.0.2",
+    "reselect": "^4.0.0",
+    "slick-carousel": "^1.8.1"
+  }
+}
